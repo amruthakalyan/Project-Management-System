@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  .logo{
+    color: rgb(229, 17, 17);
+    font-size: large;
+    font-weight: 500;
+  }
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li {
+    display: inline;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar-links a:hover {
+    color: #ddd;
+  }
+  
+  .dashboard-content {
+    padding: 20px;
+  }
+  
