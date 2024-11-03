@@ -1,8 +1,18 @@
 // src/components/Navbar.js
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
+
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Clear user session data here
+    localStorage.removeItem('user'); 
+    navigate("/login"); // Navigate to the login page
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-links">
@@ -19,9 +29,13 @@ const Navbar = () => {
         <li>
           <Link to="reports">Reports</Link>
         </li>
+        <li>
+          <button onClick={handleLogout} className="logout-button">Logout</button>
+        </li>
       </ul>
     </nav>
   );
 };
 
 export default Navbar;
+

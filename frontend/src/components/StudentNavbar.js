@@ -1,8 +1,17 @@
 // src/components/StudentNavbar.js
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";  // Assuming the same styling as AdminNavbar
 
 const StudentNavbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Clear user session data here
+    localStorage.removeItem('user'); // Example of clearing user data from localStorage
+    navigate("/login"); // Navigate to the login page
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-links">
@@ -15,6 +24,9 @@ const StudentNavbar = () => {
         </li>
         <li>
           <Link to="tasks">Tasks</Link>
+        </li>
+        <li>
+          <button onClick={handleLogout} className="logout-button">Logout</button>
         </li>
       </ul>
     </nav>

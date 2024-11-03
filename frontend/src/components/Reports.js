@@ -26,8 +26,9 @@ const CreateReport = () => {
   
   return (
     <div>
-      <h2>Create Report</h2>
+      
       <form onSubmit={handleSubmit}>
+      <h2>Create Report</h2>
         <div>
           <label>Title:</label>
           <input

@@ -53,9 +53,9 @@ const Project = () => {
 
   return (
     <div>
-      <h2>Projects</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
+      <h2>Projects</h2>
         <div>
           <label>Title:</label>
           <input

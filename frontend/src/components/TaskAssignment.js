@@ -26,8 +26,9 @@ const TaskAssignment = () => {
 
   return (
     <div>
-      <h2>Task Assignment</h2>
+
       <form onSubmit={handleSubmit}>
+      <h2>Task Assignment</h2>
         <label>Task Title:</label>
         <input 
           type="text" 

@@ -47,7 +47,8 @@ exports.loginUser = async (req, res) => {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    res.status(200).json({ message: 'Login successful', user });
+    // Send response with message and user role
+    res.status(200).json({ message: 'Login successful', role: user.role });
   } catch (error) {
     console.error('Error logging in:', error); // Log the error for debugging
     res.status(500).json({ message: 'Error logging in', error });
